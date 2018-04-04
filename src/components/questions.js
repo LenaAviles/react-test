@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AppQuestion from './question';
 
-class AppQuestions extends Component {
+export class AppQuestions extends Component {
       
     render() {
       return (
@@ -17,4 +17,4 @@ class AppQuestions extends Component {
     }
   }
   
-  export default AppQuestions;
+  // export default AppQuestions;
