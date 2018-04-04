@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { AppHeader } from './components/header'
 import { AppMenu } from './components/menu'
+import { AppQuestions } from './components/questions';
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +23,8 @@ class App extends Component {
         <AppMenu
           open={this.state.isMenuOpen}
           clickOut={(isMenuOpen) => this.setState({ isMenuOpen })}
-        />        
+        /> 
+        <AppQuestions/>       
       </div>
     );
   }
