@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { AppHeader } from './components/header'
-import { AppMenu } from './components/menu'
-import { AppQuestions } from './components/questions';
+import AppHeader from './components/header'
+import AppMenu from './components/menu'
+import QuestionList from './components/QuestionList';
+import { QUESTIONS } from './fixtures';
+
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +26,7 @@ class App extends Component {
           open={this.state.isMenuOpen}
           clickOut={(isMenuOpen) => this.setState({ isMenuOpen })}
         /> 
-        <AppQuestions/>       
+        <QuestionList questions = {QUESTIONS}/>       
       </div>
     );
   }

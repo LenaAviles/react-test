@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import { indigo700 }  from 'material-ui/styles/colors';
 
-export const AppHeader = (props) => {
+const AppHeader = (props) => {
     return (
         <AppBar
             title="CONSILIUM"
@@ -12,3 +12,5 @@ export const AppHeader = (props) => {
         />
     )
 }
+
+export default AppHeader;

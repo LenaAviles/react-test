@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
-export const AppMenu = (props) => {
+const AppMenu = (props) => {
     return (
         <Drawer
         docked={false}
@@ -17,3 +17,5 @@ export const AppMenu = (props) => {
       </Drawer>
     )
 }
+
+export default AppMenu;
