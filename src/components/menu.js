@@ -1,6 +1,11 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
+import AddIcon from 'material-ui/svg-icons/content/add-circle-outline';
+import CategoriesIcon from 'material-ui/svg-icons/action/view-list';
+import LoginIcon from 'material-ui/svg-icons/action/lock';
+import HomeIcon from 'material-ui/svg-icons/action/home';
 
 const AppMenu = (props) => {
     return (
@@ -10,10 +15,12 @@ const AppMenu = (props) => {
         open={props.open}
         onRequestChange={open => props.clickOut(open)}        
       >
-        <MenuItem onClick={this.handleClose}>Add Question</MenuItem>
-        <MenuItem onClick={this.handleClose}>Questions</MenuItem>
-        <MenuItem onClick={this.handleClose}>Categories</MenuItem>
-        <MenuItem onClick={this.handleClose}>Login</MenuItem>
+        <MenuItem primaryText="Главная" onClick={this.handleClose} leftIcon={<HomeIcon />} />
+        <MenuItem primaryText="Задать вопрос" onClick={this.handleClose} leftIcon={<AddIcon />} />        
+        <MenuItem primaryText="Категории" onClick={this.handleClose} leftIcon={<CategoriesIcon />} />
+        <Divider />
+        <MenuItem primaryText="Войти" onClick={this.handleClose} rightIcon={<LoginIcon />} />
+        <MenuItem primaryText="Регистрация" onClick={this.handleClose} />
       </Drawer>
     )
 }

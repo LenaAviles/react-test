@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import AppHeader from './components/header'
-import AppMenu from './components/menu'
-import QuestionList from './components/QuestionList';
 import { QUESTIONS } from './fixtures';
+
+// COMPONENTS
+import AppHeader from './components/header';
+import AppMenu from './components/menu';
+import Navigation from './components/navigation';
+import QuestionList from './components/QuestionList';
 
 
 class App extends Component {
@@ -22,6 +25,7 @@ class App extends Component {
         <AppHeader
           onLeftIconClick={() => this.setState({isMenuOpen: true})}
         />
+        <Navigation />
         <AppMenu
           open={this.state.isMenuOpen}
           clickOut={(isMenuOpen) => this.setState({ isMenuOpen })}
