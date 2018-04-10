@@ -28,7 +28,6 @@ class QuestionList extends Component {
       </List>      
     );
   }
-
 }
 
 export default QuestionList;

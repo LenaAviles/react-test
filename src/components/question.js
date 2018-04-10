@@ -6,7 +6,7 @@ import Chip from 'material-ui/Chip';
 import { getYearNoun } from '../helpers'
 
 
-export default class Question extends Component {
+class Question extends Component {
     constructor(props) {
         super(props);
 
@@ -70,7 +70,7 @@ export default class Question extends Component {
         const description = expanded ? question.description : sliced;
         return (   
             <div> 
-                <p>{description}</p>                
+                <p>{description}</p>
             </div>
         )
     }
@@ -85,5 +85,7 @@ export default class Question extends Component {
         const age = user.age + ' ' + getYearNoun(user.age);
         return name + ', ' + age;
     }
-    
 }
+
+export default Question;
+

@@ -7,22 +7,35 @@ import CategoriesIcon from 'material-ui/svg-icons/action/view-list';
 import LoginIcon from 'material-ui/svg-icons/action/lock';
 import HomeIcon from 'material-ui/svg-icons/action/home';
 
-const AppMenu = (props) => {
+
+
+class AppMenu extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  onClick = () =>  {
+    this.props.itemClicked();   
+  }
+
+  render() {
     return (
         <Drawer
         docked={false}
         width={200}
-        open={props.open}
-        onRequestChange={open => props.clickOut(open)}        
+        open={this.props.open}
+        onRequestChange={open => this.props.clickOut(open)}        
       >
-        <MenuItem primaryText="Главная" onClick={this.handleClose} leftIcon={<HomeIcon />} />
-        <MenuItem primaryText="Задать вопрос" onClick={this.handleClose} leftIcon={<AddIcon />} />        
-        <MenuItem primaryText="Категории" onClick={this.handleClose} leftIcon={<CategoriesIcon />} />
+        <MenuItem primaryText="Главная" onClick={this.onClick} leftIcon={<HomeIcon />} />
+        <MenuItem primaryText="Задать вопрос" onClick={this.onClick} leftIcon={<AddIcon />} />        
+        <MenuItem primaryText="Категории" onClick={this.onClick} leftIcon={<CategoriesIcon />} />
         <Divider />
-        <MenuItem primaryText="Войти" onClick={this.handleClose} rightIcon={<LoginIcon />} />
-        <MenuItem primaryText="Регистрация" onClick={this.handleClose} />
+        <MenuItem primaryText="Войти" onClick={this.onClick} rightIcon={<LoginIcon />} />
+        <MenuItem primaryText="Регистрация" onClick={this.onClick} />
       </Drawer>
     )
+  }
 }
 
 export default AppMenu;
