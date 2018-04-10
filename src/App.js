@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+
+import { QUESTIONS } from './fixtures';
+
+// COMPONENTS
 import AppHeader from './components/header'
 import AppMenu from './components/menu'
 import QuestionList from './components/QuestionList';
-import { QUESTIONS } from './fixtures';
-
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +16,10 @@ class App extends Component {
     this.state = {
       isMenuOpen: false
     }
+    this.handleOpen = this.handleOpen.bind(this);
+  }
+  handleOpen(){
+    this.setState({isMenuOpen: !this.state.isMenuOpen})
   }
 
   render() {
@@ -25,6 +31,7 @@ class App extends Component {
         <AppMenu
           open={this.state.isMenuOpen}
           clickOut={(isMenuOpen) => this.setState({ isMenuOpen })}
+          itemClicked = {this.handleOpen}
         /> 
         <QuestionList questions = {QUESTIONS}/>       
       </div>

@@ -31,8 +31,7 @@ class QuestionList extends Component {
       </Card>
     );
   }
-
-
+  
 }
 
 export default QuestionList;

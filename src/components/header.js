@@ -8,7 +8,7 @@ const AppHeader = (props) => {
             title="CONSILIUM"
             iconClassNameRight="muidocs-icon-navigation-expand-more"
             style={{ backgroundColor: indigo700 }}
-            onLeftIconButtonClick={ () => props.onLeftIconClick() }
+            onLeftIconButtonClick={ props.onLeftIconClick }
         />
     )
 }

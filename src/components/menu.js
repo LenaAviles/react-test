@@ -2,20 +2,34 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
-const AppMenu = (props) => {
+
+
+class AppMenu extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  onClick = () =>  {
+    this.props.itemClicked();
+    // console.log(this.props)
+  }
+
+  render() {
     return (
         <Drawer
         docked={false}
         width={200}
-        open={props.open}
-        onRequestChange={open => props.clickOut(open)}        
+        open={this.props.open}
+        onRequestChange={open => this.props.clickOut(open)}        
       >
-        <MenuItem onClick={this.handleClose}>Add Question</MenuItem>
-        <MenuItem onClick={this.handleClose}>Questions</MenuItem>
-        <MenuItem onClick={this.handleClose}>Categories</MenuItem>
-        <MenuItem onClick={this.handleClose}>Login</MenuItem>
+        <MenuItem onClick={this.onClick}>Add Question</MenuItem>
+        <MenuItem onClick={this.onClick}>Questions</MenuItem>
+        <MenuItem onClick={this.onClick}>Categories</MenuItem>
+        <MenuItem onClick={this.onClick}>Login</MenuItem>
       </Drawer>
     )
+  }
 }
 
 export default AppMenu;

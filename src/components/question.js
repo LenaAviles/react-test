@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Question extends Component {
+class Question extends Component {
     constructor(props) {
         super(props);
 
@@ -31,8 +31,10 @@ export default class Question extends Component {
         const description = isOpen ? question.description : sliced;
         return (   
             <div>                        
-                <p>{description}</p>
-                <a onClick={this.toggleOpen}>{ isOpen ? 'меньше' : 'больше'}</a>
+                <p>
+                    {description}
+                    <a className="minor-text" onClick={this.toggleOpen}>{ isOpen ? '<< меньше' : 'больше >>'}</a>
+                </p>
             </div>
         )
     }
@@ -43,3 +45,5 @@ export default class Question extends Component {
         })
     }
 }
+
+export default Question;
