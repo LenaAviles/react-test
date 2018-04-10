@@ -1,6 +1,11 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
+import AddIcon from 'material-ui/svg-icons/content/add-circle-outline';
+import CategoriesIcon from 'material-ui/svg-icons/action/view-list';
+import LoginIcon from 'material-ui/svg-icons/action/lock';
+import HomeIcon from 'material-ui/svg-icons/action/home';
 
 
 
@@ -11,8 +16,7 @@ class AppMenu extends React.Component {
   }
 
   onClick = () =>  {
-    this.props.itemClicked();
-    // console.log(this.props)
+    this.props.itemClicked();   
   }
 
   render() {
@@ -23,10 +27,12 @@ class AppMenu extends React.Component {
         open={this.props.open}
         onRequestChange={open => this.props.clickOut(open)}        
       >
-        <MenuItem onClick={this.onClick}>Add Question</MenuItem>
-        <MenuItem onClick={this.onClick}>Questions</MenuItem>
-        <MenuItem onClick={this.onClick}>Categories</MenuItem>
-        <MenuItem onClick={this.onClick}>Login</MenuItem>
+        <MenuItem primaryText="Главная" onClick={this.onClick} leftIcon={<HomeIcon />} />
+        <MenuItem primaryText="Задать вопрос" onClick={this.onClick} leftIcon={<AddIcon />} />        
+        <MenuItem primaryText="Категории" onClick={this.onClick} leftIcon={<CategoriesIcon />} />
+        <Divider />
+        <MenuItem primaryText="Войти" onClick={this.onClick} rightIcon={<LoginIcon />} />
+        <MenuItem primaryText="Регистрация" onClick={this.onClick} />
       </Drawer>
     )
   }

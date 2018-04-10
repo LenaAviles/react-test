@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Question from './Question';
-import { Card } from 'material-ui/Card';
 import { List, ListItem } from 'material-ui/List';
 import { firebaseQuestions, firebaseLooper } from '../firebase';
 
@@ -23,15 +22,12 @@ class QuestionList extends Component {
     const { questions } = this.state;
     const questionElements = questions.map(question => <ListItem key={question.id}><Question question={question} /></ListItem>);
 
-    return (
-      <Card>
-        <List>
-          {questionElements}
-        </List>
-      </Card>
+    return (      
+      <List>          
+        {questionElements}          
+      </List>      
     );
   }
-  
 }
 
 export default QuestionList;
