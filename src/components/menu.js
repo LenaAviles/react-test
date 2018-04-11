@@ -27,7 +27,7 @@ class AppMenu extends React.Component {
         open={this.props.open}
         onRequestChange={open => this.props.clickOut(open)}        
       >
-        <MenuItem primaryText="Главная" onClick={this.onClick} leftIcon={<HomeIcon />} />
+        <MenuItem primaryText="Главная" href="/home" onClick={this.onClick} leftIcon={<HomeIcon />} />
         <MenuItem primaryText="Задать вопрос" onClick={this.onClick} leftIcon={<AddIcon />} />        
         <MenuItem primaryText="Категории" onClick={this.onClick} leftIcon={<CategoriesIcon />} />
         <Divider />

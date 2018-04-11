@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders shallow correctly 1`] = `
+<div>
+  <AppHeader
+    onLeftIconClick={[Function]}
+  />
+  <Navigation />
+  <AppMenu
+    clickOut={[Function]}
+    itemClicked={[Function]}
+    open={false}
+  />
+  <QuestionList
+    questions={
+      Array [
+        Object {
+          "anonymously": true,
+          "category": "1",
+          "comments": Array [],
+          "date": 2018-04-11T18:43:09.194Z,
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, rerum.",
+          "id": 0,
+          "test": "blood",
+          "user": "Lena",
+        },
+        Object {
+          "anonymously": true,
+          "category": "1",
+          "comments": Array [],
+          "date": 2018-04-11T18:43:09.194Z,
+          "description": "Lorem ipsum dolor sit amet.",
+          "id": 1,
+          "test": "blood",
+          "user": "Lena",
+        },
+        Object {
+          "anonymously": true,
+          "category": "1",
+          "comments": Array [],
+          "date": 2018-04-11T18:43:09.194Z,
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias non natus perferendis cum in aspernatur architecto corporis, quidem minima accusantium dicta dolorem corrupti quas labore?",
+          "id": 2,
+          "test": "blood",
+          "user": "Lena",
+        },
+        Object {
+          "anonymously": true,
+          "category": "2",
+          "comments": Array [],
+          "date": 2018-04-11T18:43:09.194Z,
+          "description": "Lorem ipsum dolor sit.",
+          "id": 3,
+          "test": "blood",
+          "user": "Lena",
+        },
+        Object {
+          "anonymously": true,
+          "category": "2",
+          "comments": Array [],
+          "date": 2018-04-11T18:43:09.194Z,
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facilis qui, numquam rem nesciunt natus!",
+          "id": 4,
+          "test": "blood",
+          "user": "Lena",
+        },
+        Object {
+          "anonymously": true,
+          "category": "2",
+          "comments": Array [],
+          "date": 2018-04-11T18:43:09.194Z,
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, deleniti sunt exercitationem hic, quisquam at sint nisi voluptatum minus rem cum! Magni saepe dolorum sed rem, in aliquid nihil, architecto exercitationem ut ratione temporibus quod quas? Molestias temporibus harum veniam!",
+          "id": 5,
+          "test": "blood",
+          "user": "Lena",
+        },
+      ]
+    }
+  />
+</div>
+`;
