@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-import { QUESTIONS } from './fixtures';
+// import { QUESTIONS } from './fixtures';
 
 // COMPONENTS
 import AppHeader from './components/header';
@@ -35,7 +35,8 @@ class App extends Component {
           clickOut={(isMenuOpen) => this.setState({ isMenuOpen })}
           itemClicked = {this.handleOpen}
         /> 
-        <QuestionList questions = {QUESTIONS}/>       
+        <QuestionList />
+        {/* <QuestionList questions = {QUESTIONS}/>        */}
       </div>
     );
   }

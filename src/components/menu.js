@@ -6,6 +6,7 @@ import AddIcon from 'material-ui/svg-icons/content/add-circle-outline';
 import CategoriesIcon from 'material-ui/svg-icons/action/view-list';
 import LoginIcon from 'material-ui/svg-icons/action/lock';
 import HomeIcon from 'material-ui/svg-icons/action/home';
+import { Link } from 'react-router-dom';
 
 
 
@@ -27,12 +28,12 @@ class AppMenu extends React.Component {
         open={this.props.open}
         onRequestChange={open => this.props.clickOut(open)}        
       >
-        <MenuItem primaryText="Главная" href="/home" onClick={this.onClick} leftIcon={<HomeIcon />} />
-        <MenuItem primaryText="Задать вопрос" onClick={this.onClick} leftIcon={<AddIcon />} />        
-        <MenuItem primaryText="Категории" onClick={this.onClick} leftIcon={<CategoriesIcon />} />
+        <MenuItem primaryText="Главная" containerElement={<Link to="/home" />} onClick={this.onClick} leftIcon={<HomeIcon />} />
+        <MenuItem primaryText="Задать вопрос" containerElement={<Link to="/add-question" />} onClick={this.onClick} leftIcon={<AddIcon />} />        
+        <MenuItem primaryText="Категории" containerElement={<Link to="/categories" />} onClick={this.onClick} leftIcon={<CategoriesIcon />} />
         <Divider />
-        <MenuItem primaryText="Войти" onClick={this.onClick} rightIcon={<LoginIcon />} />
-        <MenuItem primaryText="Регистрация" onClick={this.onClick} />
+        <MenuItem primaryText="Войти" containerElement={<Link to="/login" />} onClick={this.onClick} rightIcon={<LoginIcon />} />
+        <MenuItem primaryText="Регистрация" containerElement={<Link to="/registration" />} onClick={this.onClick} />
       </Drawer>
     )
   }
