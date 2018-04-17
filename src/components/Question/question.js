@@ -3,7 +3,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardText} from 'material-ui/Ca
 import FlatButton from 'material-ui/FlatButton';
 import FaceIcon from 'material-ui/svg-icons/action/face';
 import Chip from 'material-ui/Chip';
-import { getYearNoun } from '../helpers'
+import { getYearNoun } from '../../helpers'
 
 
 class Question extends Component {
