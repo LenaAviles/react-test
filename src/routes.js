@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom';
-import QuestionList from './components/QuestionList/question-list';
+import QuestionList from './components/QuestionList';
 import Layout from './hoc/Layout/layout';
+import AddQuestion from './components/AddQuestion'
 
 class Routes extends Component {
     render() {
@@ -9,6 +10,7 @@ class Routes extends Component {
             <Layout>
                 <Switch>
                     <Route path='/' exact component={QuestionList} />
+                    <Route path='/add-question' component={AddQuestion} />
                 </Switch>
             </Layout>
         )

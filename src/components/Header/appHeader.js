@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppBar from 'material-ui/AppBar';
 import { indigo700 }  from 'material-ui/styles/colors';
 import logo from '../../logo.svg';
@@ -8,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const AppHeader = (props) => { 
     const getLogo = () => (
-        <Link to="/">
+        <Link to="/" onClick={props.onLeftIconClick}>
             <img src={logo} className="App-logo" alt="logo" />
         </Link>
     )    
@@ -22,6 +23,11 @@ const AppHeader = (props) => {
             iconElementRight={<IconButton><MoreVertIcon /></IconButton>}
         />
     )
+}
+
+AppHeader.propTypes = {
+    onLeftIconClick: PropTypes.func.isRequired,
+    onRightIconClick: PropTypes.func.isRequired,
 }
 
 export default AppHeader;

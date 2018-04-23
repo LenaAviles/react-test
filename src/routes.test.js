@@ -1,11 +1,10 @@
 import React from 'react';
-import App from './App';
+import Routes from './routes';
 import ShallowRenderer  from 'react-test-renderer/shallow';
 
-it('renders App correctly', () => {
+it('renders Routes correctly', () => {
   const renderer = new ShallowRenderer()
   const tree = renderer
-    .render(<App />);
+    .render(<Routes />);
   expect(tree).toMatchSnapshot();
 });
-

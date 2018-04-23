@@ -1,0 +1,4 @@
+.navItem > div > div {    
+    min-width: 101% !important;
+    text-align: center;
+}
