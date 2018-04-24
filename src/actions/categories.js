@@ -11,7 +11,7 @@ const getCategories = () => dispatch => {
       const categories = firebaseLooper(snapshot);
       dispatch({ type: CAT_GET_SUCCESS, payload: categories });
     })
-    .catch(err => {
+    .catch(err => {      
       dispatch({
         type: CAT_GET_FAILED,
         payload: err

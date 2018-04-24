@@ -36,7 +36,7 @@ import {
           ...state,
           loading: true
         };
-      case QUESTION_POST_SUCCESS:
+      case QUESTION_POST_SUCCESS:      
         return {
           ...state,
           loading: false,
