@@ -6,7 +6,7 @@ export const CAT_GET_FAILED = "CAT_GET_FAILED";
 
 const getCategories = () => dispatch => {
   dispatch({ type: CAT_GET_START });
-  firebaseCategories.once('value')
+  return firebaseCategories.once('value')
     .then(snapshot => {
       const categories = firebaseLooper(snapshot);
       dispatch({ type: CAT_GET_SUCCESS, payload: categories });
