@@ -13,13 +13,29 @@ jest.mock('../firebase', () => ({
     firebaseLooper: (response) => response
 }))
 
-it('calls request and success actions if the fetch response was successful', () => {
+it('getCategories() dispatch two actions if the fetch response was successful', () => {
 
     const store = mockStore({ items: [] });
     store.dispatch(getCategories()).then(() => {
         const expectedActions = store.getActions();        
-        expect(expectedActions.length).toBe(2);
-        expect(expectedActions).toContainEqual({ type: CAT_GET_START });
+        expect(expectedActions.length).toBe(2);        
+    })
+});
+
+it('getCategories() dispatch CAT_GET_START action if the fetch response was successful', () => {
+
+    const store = mockStore({ items: [] });
+    store.dispatch(getCategories()).then(() => {
+        const expectedActions = store.getActions();
+        expect(expectedActions).toContainEqual({ type: CAT_GET_START });        
+    })
+});
+
+it('getCategories() dispatch CAT_GET_SUCCESS action if the fetch response was successful', () => {
+
+    const store = mockStore({ items: [] });
+    store.dispatch(getCategories()).then(() => {
+        const expectedActions = store.getActions();        
         expect(expectedActions).toContainEqual({ type: CAT_GET_SUCCESS, payload: ['mock category'] });
     })
 });
